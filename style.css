@@ -1,20 +1,3 @@
-:root {
-  --primary: #2563eb;
-  --primary-dark: #1d4ed8;
-  --primary-light: #eff6ff;
-  --bg: #f8fafc;
-  --card: #ffffff;
-  --text: #0f172a;
-  --muted: #64748b;
-  --border: #e2e8f0;
-  --success-bg: #dcfce7;
-  --success-border: #16a34a;
-  --success-text: #15803d;
-  --error-bg: #fee2e2;
-  --error-border: #dc2626;
-  --error-text: #b91c1c;
-}
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -24,15 +7,15 @@
 body {
   font-family:
     -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.6;
+  background-color: #000000;
+  color: #ffffff;
+  line-height: 1.65;
   padding-bottom: 4rem;
 }
 
 header {
-  background: var(--card);
-  border-bottom: 1px solid var(--border);
+  background-color: #000000;
+  border-bottom: 2px solid #ffffff;
   padding: 1.25rem 1rem;
   text-align: center;
   position: sticky;
@@ -42,16 +25,17 @@ header {
 
 header h1 {
   font-size: 1.45rem;
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.25rem;
+  color: #ffffff;
 }
 
 header p {
-  color: var(--muted);
   font-size: 0.9rem;
+  color: #ffffff;
 }
 
 .container {
-  max-width: 900px;
+  max-width: 920px;
   margin: 1.5rem auto;
   padding: 0 1rem;
 }
@@ -59,28 +43,25 @@ header p {
 /* Chapter Navigation Tabs */
 .tabs {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(195px, 1fr));
   gap: 0.75rem;
   margin-bottom: 1.25rem;
 }
 
 .tab-btn {
-  background: var(--card);
-  border: 2px solid var(--border);
-  border-radius: 10px;
+  background-color: #000000;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 6px;
   padding: 0.85rem 1rem;
   cursor: pointer;
   text-align: left;
-  transition: all 0.2s ease;
-}
-
-.tab-btn:hover {
-  border-color: var(--primary);
 }
 
 .tab-btn.active {
-  border-color: var(--primary);
-  background: var(--primary-light);
+  background-color: #ffffff;
+  color: #000000;
+  border: 2px solid #ffffff;
 }
 
 .tab-title {
@@ -90,60 +71,58 @@ header p {
 }
 
 .tab-status {
-  font-size: 0.8rem;
-  color: var(--muted);
+  font-size: 0.82rem;
   margin-top: 0.25rem;
   display: inline-block;
 }
 
 .tab-status.done {
-  color: var(--success-text);
-  font-weight: 600;
+  font-weight: 700;
+  text-decoration: underline;
 }
 
-/* Mode Switcher (Notes vs Quiz) */
+/* Mode Switcher */
 .mode-bar {
   display: flex;
   gap: 0.5rem;
-  background: #e2e8f0;
+  background-color: #000000;
+  border: 1px solid #ffffff;
   padding: 0.35rem;
-  border-radius: 10px;
+  border-radius: 6px;
   margin-bottom: 1.5rem;
 }
 
 .mode-btn {
   flex: 1;
-  padding: 0.65rem 1rem;
-  border: none;
-  border-radius: 7px;
+  padding: 0.7rem 1rem;
+  border: 1px solid transparent;
+  border-radius: 4px;
   font-size: 0.95rem;
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
-  background: transparent;
-  color: var(--muted);
-  transition: all 0.2s;
+  background-color: #000000;
+  color: #ffffff;
 }
 
 .mode-btn.active {
-  background: var(--card);
-  color: var(--primary);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  color: #000000;
 }
 
-/* Visual Study Notes Styling */
+/* Visual Study Notes */
 .notes-wrapper {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 12px;
+  background-color: #000000;
+  border: 1px solid #ffffff;
+  border-radius: 8px;
   padding: 1.75rem;
 }
 
 .notes-wrapper h2 {
   font-size: 1.35rem;
-  color: var(--primary-dark);
+  color: #ffffff;
   margin-bottom: 1rem;
   padding-bottom: 0.5rem;
-  border-bottom: 2px solid var(--primary-light);
+  border-bottom: 2px solid #ffffff;
 }
 
 .note-block {
@@ -153,7 +132,8 @@ header p {
 .note-block h3 {
   font-size: 1.05rem;
   margin-bottom: 0.5rem;
-  color: var(--text);
+  color: #ffffff;
+  text-decoration: underline;
 }
 
 .note-block ul {
@@ -166,14 +146,15 @@ header p {
 }
 
 .diagram-box {
-  background: #f1f5f9;
-  border-left: 4px solid var(--primary);
+  background-color: #000000;
+  border: 1px solid #ffffff;
+  border-left: 4px solid #ffffff;
   padding: 0.9rem 1.1rem;
-  border-radius: 6px;
   font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
   font-size: 0.88rem;
   margin: 0.75rem 0;
   overflow-x: auto;
+  color: #ffffff;
 }
 
 .note-table {
@@ -185,21 +166,23 @@ header p {
 
 .note-table th,
 .note-table td {
-  border: 1px solid var(--border);
+  border: 1px solid #ffffff;
   padding: 0.6rem 0.75rem;
   text-align: left;
+  background-color: #000000;
+  color: #ffffff;
 }
 
 .note-table th {
-  background: var(--primary-light);
-  color: var(--primary-dark);
+  background-color: #ffffff;
+  color: #000000;
 }
 
 .callout {
-  background: #fefce8;
-  border-left: 4px solid #eab308;
+  background-color: #000000;
+  border: 1px solid #ffffff;
+  border-left: 4px solid #ffffff;
   padding: 0.75rem 1rem;
-  border-radius: 6px;
   font-size: 0.92rem;
   margin-top: 0.65rem;
 }
@@ -207,12 +190,11 @@ header p {
 /* Score Banner */
 .score-banner {
   display: none;
-  background: var(--card);
-  border-left: 5px solid var(--primary);
-  border-radius: 8px;
+  background-color: #000000;
+  border: 2px solid #ffffff;
+  border-radius: 6px;
   padding: 1.25rem;
   margin-bottom: 1.5rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
@@ -224,77 +206,90 @@ header p {
 }
 
 #bannerSubtext {
-  color: var(--muted);
   font-size: 0.9rem;
+  color: #ffffff;
 }
 
 /* Question Cards */
 .section-label {
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--primary);
+  letter-spacing: 0.06em;
+  color: #000000;
+  background-color: #ffffff;
+  padding: 0.5rem 0.85rem;
   font-weight: 700;
-  margin: 1.75rem 0 0.75rem;
+  margin: 2rem 0 1rem;
+  border-radius: 4px;
 }
 
 .q-card {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 10px;
+  background-color: #000000;
+  border: 1px solid #ffffff;
+  border-radius: 6px;
   padding: 1.25rem;
   margin-bottom: 1rem;
-  transition: border-color 0.2s;
 }
 
 .q-card.correct {
-  background: var(--success-bg);
-  border-color: var(--success-border);
+  border: 2px solid #ffffff;
 }
 
 .q-card.incorrect {
-  background: var(--error-bg);
-  border-color: var(--error-border);
+  border: 2px dashed #ffffff;
 }
 
 .q-text {
   font-weight: 600;
   margin-bottom: 0.85rem;
+  color: #ffffff;
 }
 
 .options label {
   display: block;
-  padding: 0.55rem 0.75rem;
-  margin-bottom: 0.4rem;
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  background: #fff;
+  padding: 0.6rem 0.8rem;
+  margin-bottom: 0.45rem;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  background-color: #000000;
+  color: #ffffff;
   cursor: pointer;
 }
 
 .options label:hover {
-  background: #f1f5f9;
+  background-color: #ffffff;
+  color: #000000;
 }
 
 .options input {
-  margin-right: 0.6rem;
+  margin-right: 0.65rem;
+  accent-color: #ffffff;
 }
 
 .fill-input {
   width: 100%;
-  max-width: 380px;
-  padding: 0.6rem 0.8rem;
-  border: 1px solid #cbd5e1;
-  border-radius: 6px;
+  max-width: 420px;
+  padding: 0.65rem 0.85rem;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  background-color: #000000;
+  color: #ffffff;
   font-size: 0.95rem;
+}
+
+.fill-input::placeholder {
+  color: #ffffff;
+  opacity: 0.7;
 }
 
 .feedback-note {
   display: none;
-  margin-top: 0.75rem;
-  font-size: 0.88rem;
-  padding-top: 0.5rem;
-  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  margin-top: 0.85rem;
+  font-size: 0.9rem;
+  padding: 0.65rem 0.8rem;
+  border: 1px solid #ffffff;
+  background-color: #000000;
+  color: #ffffff;
 }
 
 .q-card.correct .feedback-note,
@@ -312,27 +307,16 @@ header p {
 
 button.btn {
   padding: 0.8rem 1.5rem;
-  border: none;
-  border-radius: 8px;
+  border: 2px solid #ffffff;
+  border-radius: 6px;
   font-size: 0.95rem;
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
+  background-color: #ffffff;
+  color: #000000;
 }
 
-.btn-primary {
-  background: var(--primary);
-  color: #fff;
-}
-
-.btn-primary:hover {
-  background: var(--primary-dark);
-}
-
-.btn-secondary {
-  background: #e2e8f0;
-  color: var(--text);
-}
-
-.btn-secondary:hover {
-  background: #cbd5e1;
+button.btn:hover {
+  background-color: #000000;
+  color: #ffffff;
 }
