@@ -1,0 +1,338 @@
+:root {
+  --primary: #2563eb;
+  --primary-dark: #1d4ed8;
+  --primary-light: #eff6ff;
+  --bg: #f8fafc;
+  --card: #ffffff;
+  --text: #0f172a;
+  --muted: #64748b;
+  --border: #e2e8f0;
+  --success-bg: #dcfce7;
+  --success-border: #16a34a;
+  --success-text: #15803d;
+  --error-bg: #fee2e2;
+  --error-border: #dc2626;
+  --error-text: #b91c1c;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  padding-bottom: 4rem;
+}
+
+header {
+  background: var(--card);
+  border-bottom: 1px solid var(--border);
+  padding: 1.25rem 1rem;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+header h1 {
+  font-size: 1.45rem;
+  margin-bottom: 0.2rem;
+}
+
+header p {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.container {
+  max-width: 900px;
+  margin: 1.5rem auto;
+  padding: 0 1rem;
+}
+
+/* Chapter Navigation Tabs */
+.tabs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.tab-btn {
+  background: var(--card);
+  border: 2px solid var(--border);
+  border-radius: 10px;
+  padding: 0.85rem 1rem;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.2s ease;
+}
+
+.tab-btn:hover {
+  border-color: var(--primary);
+}
+
+.tab-btn.active {
+  border-color: var(--primary);
+  background: var(--primary-light);
+}
+
+.tab-title {
+  font-weight: 700;
+  display: block;
+  font-size: 0.95rem;
+}
+
+.tab-status {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-top: 0.25rem;
+  display: inline-block;
+}
+
+.tab-status.done {
+  color: var(--success-text);
+  font-weight: 600;
+}
+
+/* Mode Switcher (Notes vs Quiz) */
+.mode-bar {
+  display: flex;
+  gap: 0.5rem;
+  background: #e2e8f0;
+  padding: 0.35rem;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.mode-btn {
+  flex: 1;
+  padding: 0.65rem 1rem;
+  border: none;
+  border-radius: 7px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: transparent;
+  color: var(--muted);
+  transition: all 0.2s;
+}
+
+.mode-btn.active {
+  background: var(--card);
+  color: var(--primary);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Visual Study Notes Styling */
+.notes-wrapper {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.75rem;
+}
+
+.notes-wrapper h2 {
+  font-size: 1.35rem;
+  color: var(--primary-dark);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--primary-light);
+}
+
+.note-block {
+  margin-bottom: 1.5rem;
+}
+
+.note-block h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.5rem;
+  color: var(--text);
+}
+
+.note-block ul {
+  padding-left: 1.35rem;
+  margin-bottom: 0.5rem;
+}
+
+.note-block li {
+  margin-bottom: 0.35rem;
+}
+
+.diagram-box {
+  background: #f1f5f9;
+  border-left: 4px solid var(--primary);
+  padding: 0.9rem 1.1rem;
+  border-radius: 6px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.88rem;
+  margin: 0.75rem 0;
+  overflow-x: auto;
+}
+
+.note-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.85rem 0;
+  font-size: 0.9rem;
+}
+
+.note-table th,
+.note-table td {
+  border: 1px solid var(--border);
+  padding: 0.6rem 0.75rem;
+  text-align: left;
+}
+
+.note-table th {
+  background: var(--primary-light);
+  color: var(--primary-dark);
+}
+
+.callout {
+  background: #fefce8;
+  border-left: 4px solid #eab308;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  font-size: 0.92rem;
+  margin-top: 0.65rem;
+}
+
+/* Score Banner */
+.score-banner {
+  display: none;
+  background: var(--card);
+  border-left: 5px solid var(--primary);
+  border-radius: 8px;
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.score-banner.visible {
+  display: flex;
+}
+
+#bannerSubtext {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* Question Cards */
+.section-label {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--primary);
+  font-weight: 700;
+  margin: 1.75rem 0 0.75rem;
+}
+
+.q-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+  transition: border-color 0.2s;
+}
+
+.q-card.correct {
+  background: var(--success-bg);
+  border-color: var(--success-border);
+}
+
+.q-card.incorrect {
+  background: var(--error-bg);
+  border-color: var(--error-border);
+}
+
+.q-text {
+  font-weight: 600;
+  margin-bottom: 0.85rem;
+}
+
+.options label {
+  display: block;
+  padding: 0.55rem 0.75rem;
+  margin-bottom: 0.4rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.options label:hover {
+  background: #f1f5f9;
+}
+
+.options input {
+  margin-right: 0.6rem;
+}
+
+.fill-input {
+  width: 100%;
+  max-width: 380px;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+.feedback-note {
+  display: none;
+  margin-top: 0.75rem;
+  font-size: 0.88rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.q-card.correct .feedback-note,
+.q-card.incorrect .feedback-note {
+  display: block;
+}
+
+/* Action Buttons */
+.actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.75rem;
+  flex-wrap: wrap;
+}
+
+button.btn {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: var(--primary-dark);
+}
+
+.btn-secondary {
+  background: #e2e8f0;
+  color: var(--text);
+}
+
+.btn-secondary:hover {
+  background: #cbd5e1;
+}
