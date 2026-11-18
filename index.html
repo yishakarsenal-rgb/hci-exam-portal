@@ -3,15 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HCI Study Portal — Visual Notes &amp; 4-Chapter Exam</title>
+    <title>HCI Study Portal — Notes &amp; 240-Question Exam</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
       <h1>Human-Computer Interaction (HCI) Exam Portal</h1>
       <p>
-        Review structured visual notes for each chapter, then take the graded
-        chapter quiz.
+        60 questions per chapter (20 Multiple Choice, 20 True/False, 20 Fill in
+        the Blank) + Study Notes
       </p>
     </header>
 
@@ -26,10 +26,10 @@
           id="btnNotesMode"
           onclick="setMode('notes')"
         >
-          📖 Study Notes
+          Study Notes
         </button>
         <button class="mode-btn" id="btnQuizMode" onclick="setMode('quiz')">
-          ✍️ Chapter Quiz
+          Chapter Quiz (60 Questions)
         </button>
       </div>
 
@@ -40,14 +40,10 @@
       <div id="quizSection" style="display: none">
         <div class="score-banner" id="scoreBanner">
           <div>
-            <h2 id="bannerHeading">Chapter Score: 0/0 (0%)</h2>
+            <h2 id="bannerHeading">Chapter Score: 0/60 (0%)</h2>
             <p id="bannerSubtext"></p>
           </div>
-          <button
-            class="btn btn-primary"
-            id="nextChapterBtn"
-            onclick="goToNextChapter()"
-          >
+          <button class="btn" id="nextChapterBtn" onclick="goToNextChapter()">
             Next Chapter &rarr;
           </button>
         </div>
@@ -62,14 +58,10 @@
           <div id="questionsContainer"></div>
 
           <div class="actions">
-            <button type="submit" class="btn btn-primary">
+            <button type="submit" class="btn">
               Submit &amp; Grade Chapter
             </button>
-            <button
-              type="button"
-              class="btn btn-secondary"
-              onclick="resetCurrentChapter()"
-            >
+            <button type="button" class="btn" onclick="resetCurrentChapter()">
               Reset Chapter
             </button>
           </div>
