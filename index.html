@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HCI Study Portal — Visual Notes &amp; 4-Chapter Exam</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Human-Computer Interaction (HCI) Exam Portal</h1>
+      <p>
+        Review structured visual notes for each chapter, then take the graded
+        chapter quiz.
+      </p>
+    </header>
+
+    <div class="container">
+      <!-- Chapter Navigation -->
+      <div class="tabs" id="chapterTabs"></div>
+
+      <!-- Mode Switcher -->
+      <div class="mode-bar">
+        <button
+          class="mode-btn active"
+          id="btnNotesMode"
+          onclick="setMode('notes')"
+        >
+          📖 Study Notes
+        </button>
+        <button class="mode-btn" id="btnQuizMode" onclick="setMode('quiz')">
+          ✍️ Chapter Quiz
+        </button>
+      </div>
+
+      <!-- Study Notes Section -->
+      <div id="notesSection"></div>
+
+      <!-- Quiz Section -->
+      <div id="quizSection" style="display: none">
+        <div class="score-banner" id="scoreBanner">
+          <div>
+            <h2 id="bannerHeading">Chapter Score: 0/0 (0%)</h2>
+            <p id="bannerSubtext"></p>
+          </div>
+          <button
+            class="btn btn-primary"
+            id="nextChapterBtn"
+            onclick="goToNextChapter()"
+          >
+            Next Chapter &rarr;
+          </button>
+        </div>
+
+        <form
+          id="quizForm"
+          onsubmit="
+            event.preventDefault();
+            gradeCurrentChapter();
+          "
+        >
+          <div id="questionsContainer"></div>
+
+          <div class="actions">
+            <button type="submit" class="btn btn-primary">
+              Submit &amp; Grade Chapter
+            </button>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              onclick="resetCurrentChapter()"
+            >
+              Reset Chapter
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
