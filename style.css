@@ -239,31 +239,105 @@ header p {
   border: 2px dashed #ffffff;
 }
 
+.q-card.jumped {
+  border: 3px double #ffffff;
+}
+
+.q-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 0.85rem;
+}
+
 .q-text {
   font-weight: 600;
-  margin-bottom: 0.85rem;
   color: #ffffff;
 }
 
+.jump-flag {
+  display: none;
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 0.78rem;
+  font-weight: 800;
+  padding: 0.2rem 0.55rem;
+  border-radius: 4px;
+  white-space: nowrap;
+  letter-spacing: 0.04em;
+}
+
+.q-card.jumped .jump-flag {
+  display: inline-block;
+}
+
+/* High-Visibility Selected Answer Styling */
 .options label {
-  display: block;
-  padding: 0.6rem 0.8rem;
+  display: flex;
+  align-items: center;
+  padding: 0.65rem 0.85rem;
   margin-bottom: 0.45rem;
   border: 1px solid #ffffff;
   border-radius: 4px;
   background-color: #000000;
   color: #ffffff;
   cursor: pointer;
+  transition: none;
 }
 
 .options label:hover {
-  background-color: #ffffff;
-  color: #000000;
+  outline: 2px solid #ffffff;
 }
 
-.options input {
-  margin-right: 0.65rem;
-  accent-color: #ffffff;
+/* Pure white inverted box when option is checked */
+.options label:has(input:checked),
+.options label.selected-option {
+  background-color: #ffffff;
+  color: #000000;
+  font-weight: 700;
+  border: 2px solid #ffffff;
+}
+
+.options input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  min-width: 18px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  margin-right: 0.75rem;
+  background-color: #000000;
+  display: inline-grid;
+  place-content: center;
+  cursor: pointer;
+}
+
+.options input[type="radio"]:checked {
+  border-color: #000000;
+  background-color: #ffffff;
+}
+
+.options input[type="radio"]:checked::before {
+  content: "";
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: #000000;
+}
+
+.selected-tag {
+  margin-left: auto;
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding-left: 0.75rem;
+  display: none;
+}
+
+.options label:has(input:checked) .selected-tag,
+.options label.selected-option .selected-tag {
+  display: inline-block;
 }
 
 .fill-input {
@@ -277,9 +351,16 @@ header p {
   font-size: 0.95rem;
 }
 
+.fill-input.has-value {
+  background-color: #ffffff;
+  color: #000000;
+  font-weight: 700;
+  border: 2px solid #ffffff;
+}
+
 .fill-input::placeholder {
   color: #ffffff;
-  opacity: 0.7;
+  opacity: 0.75;
 }
 
 .feedback-note {
