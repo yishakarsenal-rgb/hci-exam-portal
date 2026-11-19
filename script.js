@@ -1882,7 +1882,6 @@ const courseData = [
           "Manually dragging hundreds of items one by one is slower than batch commands.",
       },
 
-      // 20 True/False
       {
         type: "tf",
         q: "Successful interaction requires effective communication from both the user and the computer.",
