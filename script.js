@@ -414,7 +414,6 @@ const courseData = [
           "True. Modern HCI addresses ethical, trustworthy, and privacy-respecting technology.",
       },
 
-      // 20 Fill in the Blank
       {
         type: "fill",
         q: "HCI stands for Human-Computer ________.",
