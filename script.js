@@ -273,7 +273,6 @@ const courseData = [
         explanation: "Linguistics studies language and clear communication.",
       },
 
-      // 20 True/False
       {
         type: "tf",
         q: "HCI is solely concerned with writing backend database code and ignores human behavior.",
