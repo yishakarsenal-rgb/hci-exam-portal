@@ -1629,7 +1629,6 @@ const courseData = [
       </div>
     `,
     questions: [
-      // 20 Multiple Choice
       {
         type: "mcq",
         q: "What are the four basic elements of interaction?",
