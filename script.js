@@ -1332,7 +1332,6 @@ const courseData = [
           "Progress indicators reassure users that the system is still working.",
       },
 
-      // 20 True/False
       {
         type: "tf",
         q: "A touchscreen acts solely as an output device and cannot detect user touch.",
