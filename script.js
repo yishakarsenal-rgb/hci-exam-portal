@@ -808,7 +808,6 @@ const courseData = [
           "WCAG provides standard accessibility guidance for web interfaces.",
       },
 
-      // 20 True/False
       {
         type: "tf",
         q: "Human information output includes actions like typing, speaking commands, and gesturing.",
