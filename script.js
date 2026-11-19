@@ -1465,7 +1465,6 @@ const courseData = [
         explanation: "False. A fingerprint reader is a biometric input device.",
       },
 
-      // 20 Fill in the Blank
       {
         type: "fill",
         q: "Hardware components used to enter data or commands into a computer are ________ devices.",
