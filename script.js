@@ -2017,7 +2017,6 @@ const courseData = [
           "True. Designers choose styles based on users, tasks, and context.",
       },
 
-      // 20 Fill in the Blank
       {
         type: "fill",
         q: "The four elements of interaction are user, input, system processing, and output/________.",
