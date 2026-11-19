@@ -2393,8 +2393,6 @@ function resetCurrentChapter() {
   renderTabs();
   renderQuestions();
 }
-
-// Initialize app
 renderTabs();
 renderNotes();
 renderQuestions();
