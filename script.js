@@ -1103,7 +1103,6 @@ const courseData = [
       </div>
     `,
     questions: [
-      // 20 Multiple Choice
       {
         type: "mcq",
         q: "In HCI, how is a computer primarily studied?",
