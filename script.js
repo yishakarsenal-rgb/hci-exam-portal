@@ -945,7 +945,6 @@ const courseData = [
         explanation: "True. Haptic/tactile cues reinforce touch actions.",
       },
 
-      // 20 Fill in the Blank
       {
         type: "fill",
         q: "The ability to distinguish fine visual details is called visual ________.",
