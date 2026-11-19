@@ -583,7 +583,6 @@ const courseData = [
       </div>
     `,
     questions: [
-      // 20 Multiple Choice
       {
         type: "mcq",
         q: "Which three human senses are most important in standard computer interactions?",
