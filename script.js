@@ -47,7 +47,6 @@ const courseData = [
       </div>
     `,
     questions: [
-      // 20 Multiple Choice
       {
         type: "mcq",
         q: "What is the primary concern of Human-Computer Interaction (HCI)?",
