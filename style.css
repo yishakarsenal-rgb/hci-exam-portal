@@ -272,7 +272,6 @@ header p {
   display: inline-block;
 }
 
-/* High-Visibility Selected Answer Styling */
 .options label {
   display: flex;
   align-items: center;
