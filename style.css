@@ -290,7 +290,6 @@ header p {
   outline: 2px solid #ffffff;
 }
 
-/* Pure white inverted box when option is checked */
 .options label:has(input:checked),
 .options label.selected-option {
   background-color: #ffffff;
