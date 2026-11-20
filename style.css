@@ -81,7 +81,6 @@ header p {
   text-decoration: underline;
 }
 
-/* Mode Switcher */
 .mode-bar {
   display: flex;
   gap: 0.5rem;
