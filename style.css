@@ -378,7 +378,6 @@ header p {
   display: block;
 }
 
-/* Action Buttons */
 .actions {
   display: flex;
   gap: 1rem;
